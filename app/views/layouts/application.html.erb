@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% # Any codes written here shows in all the pages %>
+  <% # Receives codes from Views folder/layouts/_navigation.html.erb %> 
+  <%= render 'layouts/navigation' %>
+  <% # Receives codes from Views folder/layouts/_messages.html.erb %> 
   <%= render 'layouts/messages' %>
-<%= yield %>
-
+  <% # Spacing jumbotron %>
+  <div class="container">
+  <%= yield %>
+  </div>
+  <% # Receives codes from Views folder/layouts/_footer.html.erb %>
+  <%= render 'layouts/footer' %>
 </body>
 </html>
