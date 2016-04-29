@@ -7,6 +7,10 @@ gem 'rails', '4.2.5'
 # User Password
 gem 'bcrypt', '~> 3.1.7'
 
+# Pagination
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 # Taken from the site - https://github.com/twbs/bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.6'
 
