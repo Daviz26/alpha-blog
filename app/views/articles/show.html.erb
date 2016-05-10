@@ -18,6 +18,12 @@
         <h4 class="center description"><strong> Description: </strong></h4>
         <hr>
         <%= simple_format(@article.description) %>
+        
+        <% #Displays Article Categories %>
+        <% if @article.categories.any? %>
+            <p>Categories: <%= render @article.categories %></p>
+        <% end %>       
+        
         <div class="article-actions">
             <% #Action buttons are displayed only for the user who created that article %> 
             <% if logged_in? && (current_user == @article.user || current_user.admin?) %>
